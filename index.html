@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Заголовок</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Bootstrap v3.3.4 Grid Styles -->
+	<style>html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:hover,a:focus{color:#23527c;text-decoration:underline}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role="button"]{cursor:pointer}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.row{margin-left:-15px;margin-right:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-xs,.visible-sm,.visible-md,.visible-lg{display:none !important}.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}table.visible-xs{display:table}tr.visible-xs{display:table-row !important}th.visible-xs,td.visible-xs{display:table-cell !important}}@media (max-width:767px){.visible-xs-block{display:block !important}}@media (max-width:767px){.visible-xs-inline{display:inline !important}}@media (max-width:767px){.visible-xs-inline-block{display:inline-block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block !important}table.visible-sm{display:table}tr.visible-sm{display:table-row !important}th.visible-sm,td.visible-sm{display:table-cell !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block !important}table.visible-md{display:table}tr.visible-md{display:table-row !important}th.visible-md,td.visible-md{display:table-cell !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block !important}}@media (min-width:1200px){.visible-lg{display:block !important}table.visible-lg{display:table}tr.visible-lg{display:table-row !important}th.visible-lg,td.visible-lg{display:table-cell !important}}@media (min-width:1200px){.visible-lg-block{display:block !important}}@media (min-width:1200px){.visible-lg-inline{display:inline !important}}@media (min-width:1200px){.visible-lg-inline-block{display:inline-block !important}}@media (max-width:767px){.hidden-xs{display:none !important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none !important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none !important}}@media (min-width:1200px){.hidden-lg{display:none !important}}.visible-print{display:none !important}@media print{.visible-print{display:block !important}table.visible-print{display:table}tr.visible-print{display:table-row !important}th.visible-print,td.visible-print{display:table-cell !important}}.visible-print-block{display:none !important}@media print{.visible-print-block{display:block !important}}.visible-print-inline{display:none !important}@media print{.visible-print-inline{display:inline !important}}.visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}@media print{.hidden-print{display:none !important}}</style>
+
+	<!-- Header CSS (First Sections of Website: paste after release from header.min.css here) -->
+	<style>body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-family:RobotoRegular,sans-serif}.hidden{display:none}h1{font-size:1.75em;font-family:RobotoLight,sans-serif;font-weight:300}h2{font-size:1.5em;font-family:Exo2Bold,sans-serif;font-weight:400}h3{font-size:1.25em;font-family:RobotoRegular,sans-serif;font-weight:400}h4{font-size:1em;font-family:RobotoRegular,sans-serif;font-weight:400}h5{font-size:.875em;font-family:RobotoLight,sans-serif;font-weight:400}h6{font-size:.8125em;font-family:RobotoRegular,sans-serif;font-weight:400}b,strong{font-family:RobotoBold,sans-serif;font-weight:400;font-size:.875em}.one-top-cat{background-color:#fff;margin:0;padding:0;max-height:40px;width:100%}.soc-main{font-size:1.125em;display:inline-block;display:inline-block;padding:0;margin:0}.soc-main li{list-style:none;display:block}.soc-main li a{text-decoration:none;color:#0f0f0f}.soc-main li a:hover{color:#ff2e4a}.cabinet-an{display:block;font-size:.75em;font-family:RobotoLight,sans-serif;text-align:right;margin:0;padding:0}.cabinet-an a{text-decoration:none;color:#0f0f0f;padding:25px}.cabinet-an a :focus,.cabinet-an a:hover{color:#ff2e4a;-webkit-transition:all .3s ease;transition:all .3s ease}#menu-head{width:100%;top:0;float:none;background-color:#fff;z-index:999}.fixed-header{display:none;background:rgba(255,255,255,.95);-webkit-box-shadow:0 1px 3px rgba(0,0,0,.12);box-shadow:0 1px 3px rgba(0,0,0,.12);border-bottom:1px solid #ddd;position:fixed;z-index:9999}#menu-head{width:100%;position:fixed;top:0;float:none;background-color:#fff;z-index:999}.mmn-line{background-color:#fff;min-height:60px;width:100%;-webkit-box-shadow:2px 0 5px rgba(0,0,0,.7);box-shadow:2px 0 5px rgba(0,0,0,.7);position:relative}.mmn-line .logo{display:block;text-decoration:none}.mmn-line-menu{text-transform:uppercase;font-size:.875em;font-family:RobotoRegular,sans-serif;float:right;padding:0}.mmn-line-menu>ul{padding:0}.mmn-line-menu>ul>li.active{color:#ff2e4a}.mmn-line-menu>ul>li.active a{color:#ff2e4a;background-color:#f7f7f7}.mmn-line-menu>ul>li.active a::after{content:'';position:absolute;height:2px;width:100%;top:0;left:10;right:0;bottom:0;background-color:#ff2e4a;-webkit-transition:all .1s ease;transition:all .1s ease}.mmn-line-menu>ul>li>a{padding:25px 15px;margin:0;text-decoration:none;color:#0f0f0f;-webkit-transition:all .4s ease;transition:all .4s ease}.mmn-line-menu>ul>li>a:hover{color:#ff2e4a;background-color:#fafafa}.mmn-line-menu>ul>li>a:hover::after{content:'';position:absolute;height:2px;width:100%;top:0;left:10;right:0;bottom:0;background-color:#ff2e4a}.sf-menu{position:static;float:none;padding:0}.sf-menu ul{padding:0}.sf-menu li{position:static}.sf-mega::after{content:'';position:absolute;height:3px;top:0;right:0;left:0;bottom:210;background-color:#ff2e4a;-webkit-transition:all .3s ease;transition:all .3s ease}.open-category{width:100%;display:block;float:left;padding:0;margin:0}.open-category h3{font-family:Exo2Bold,sans-serif;font-size:1.25em;margin-left:10px}.category-items{font-size:1em;font-family:RobotoRegular,sans-serif;text-decoration:none;list-style-type:none;width:100%;text-align:left;padding:0;margin:0}.category-items li a{text-decoration:none;text-transform:none;color:#0f0f0f;display:block;padding:10px;position:relative}.category-items li a:hover{color:#fff;background-color:#fa0021;-webkit-transition:all .4s ease;transition:all .4s ease}.toggle-mnu{display:block;position:absolute;width:58px;height:58px;overflow:hidden;margin-top:14px;border-style:solid;border-width:2px;border-color:#999;padding:12px 6px 0 6px;margin-bottom:0;-webkit-border-radius:5px;border-radius:5px;z-index:999}.toggle-mnu span:after{content:"";position:absolute;left:0;top:10px}.toggle-mnu span:before{content:"";position:absolute;left:0;top:14px}.toggle-mnu span:after{top:27px}.toggle-mnu span{position:relative;display:block}.toggle-mnu span,.toggle-mnu span:after,.toggle-mnu span:before{width:100%;height:3px;background-color:#777;-webkit-transition:all .3s;transition:all .3s;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-border-radius:2px;border-radius:2px}.toggle-mnu.on span{background-color:transparent}.toggle-mnu.on span:before{-webkit-transform:rotate(45deg) translate(-2px,-1px);-ms-transform:rotate(45deg) translate(-2px,-1px);transform:rotate(45deg) translate(-2px,-1px);height:5px}.toggle-mnu.on span:after{-webkit-transform:rotate(-45deg) translate(10px,-11px);-ms-transform:rotate(-45deg) translate(10px,-11px);transform:rotate(-45deg) translate(10px,-11px);height:5px}.toggle-mnu{top:0;right:0}.hiden-main-menu{display:none;text-transform:uppercase;font-size:.875em;background-color:#fff;width:100%;position:relative;padding:0;margin:0}.hiden-main-menu ul{text-decoration:none;list-style:none;text-align:center;padding:0}.hiden-main-menu ul li{display:block;list-style:none;text-decoration:none}.hiden-main-menu ul li.active{background-color:#f2f2f2}.hiden-main-menu ul li a{color:#0f0f0f;padding:3px;text-decoration:none;position:relative;display:block;-webkit-transition:color .2s ease;transition:color .2s ease}.hiden-main-menu ul li a::before{content:"";position:absolute;height:2px;top:auto;right:50%;bottom:-5px;left:50%;background:#ff655f;-webkit-transition:.9s;transition:.9s}.hiden-main-menu ul li a::after{content:"";position:absolute;height:2px;top:auto;right:50%;bottom:-5px;left:50%;background:#ff655f;-webkit-transition:.9s;transition:.9s}.hiden-main-menu ul li a:hover{background-color:#f5f5f5;-webkit-transition:all .2s ease;transition:all .2s ease}.hiden-main-menu ul li a:hover ::before,.hiden-main-menu ul li a:hover::after{left:0;right:0}.dropmain-menu{display:none}.header-conteiner{padding:5% 0 5% 0;margin:30px 0 0 0;color:#fff;text-align:center;background-image:url(../img/bg-head.jpg);background-position:top center;background-size:210vh;background-repeat:no-repeat}.header-content{width:100%;text-align:center}.header-content img{display:block;margin:0 auto}.header-content .label-text{text-transform:uppercase;font-family:Exo2Bold,sans-serif;padding:0 0 0;margin:0}.header-content .label-text .header-text-logo{padding:0 10px;margin:0;text-align:right}.header-content .label-text .header-text-logo>h2{font-size:1.875em;text-shadow:5px 6px 6px rgba(0,0,0,.7)}.header-content .label-text .header-text-logo-elem{padding:0 0 0 10px;margin:0;color:#ff2e4a;text-align:left}.header-content .label-text .header-text-logo-elem>h2{font-size:1.875em;text-shadow:5px 6px 6px rgba(0,0,0,.7)}.header-content .text-header{font-size:.875em;text-align:center;width:300px;padding:30px 0 20px 0;margin:0 auto;font-family:RobotoLight,sans-serif}.uslugi-main{background-color:#fff;font-family:RobotoLight,sans-serif;min-height:320px;margin:0 auto}.uslugi-main h2{text-align:center;color:#ff2e4a}.open-category-2{margin:0;padding:0;max-width:320px;float:left}.open-category-2 h3{margin:5px 0 20px 4px;font-family:Exo2Bold,sans-serif;padding:0;max-width:320px;text-align:left;font-size:1.125em}.category-items-2{font-family:RobotoRegular,sans-serif;font-size:1em;padding:0;margin:0;text-decoration:none;list-style-type:none;width:100%;text-align:left}.category-items-2 li{position:relative;padding:5px;float:left;width:100%}.category-items-2 li a{display:block;position:relative;padding:5px;text-decoration:none;text-transform:none;color:#0f0f0f;width:100%}.category-items-2 li a:hover{color:#ff2e4a}.category-items-2 li a img{width:30px;height:30px;float:left;margin-right:10px;color:#000}.png-icon-wrapper{display:inline-block;vertical-align:middle}</style>
+
+	<!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+	<script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
+
+	<!-- Load CSS Start -->
+	<script>loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" );</script>
+	<script>loadCSS( "css/header.min.css?ver=1.0.0", false, "all" );</script>
+	<script>loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );</script>
+	<!-- Load CSS End -->
+
+	<!-- Load CSS Compiled without JS -->
+	<noscript>
+		<link rel="stylesheet" href="css/fonts.min.css">
+		<link rel="stylesheet" href="css/main.min.css">
+	</noscript>
+
+</head>
+
+<body class="ishome-body">
+
+	<!-- Здесь пишем код -->
+	<header class="main-head clearfix">
+		<div id="menu-head" class="mmn-headmenu clearfix">
+			<div class="mmn-line">
+
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2 col-sm-4 col-xs-6">
+							<a href="#" class="logo"><img src="img/logo.png" alt="Veduschie.kz"></a>
+						</div>
+						<div class="col-md-10 col-sm-8 col-xs-6">
+
+							<nav class="mmn-line-menu">
+
+
+								<ul class="sf-menu hidden-md hidden-sm hidden-xs">
+									<li class="active"><a href="#" >Главная</a></li>
+									<li><a href="#">Ведущие</a></li>
+									<li><a href="#">Все услуги <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+										<div class="sf-mega">
+											<div class="col-md-4">
+												<div class="open-category">
+													<h3>Специалисты</h3>
+													<ul class="category-items ">
+														<li><a href="#">Ведущие & Тамада</a></li>
+														<li><a href="#">Dj</a></li>
+														<li><a href="#">Живые команды</a></li>
+														<li><a href="#">Фото&Видео</a></li>
+														<li><a href="#">Шоу-программа</a></li>
+														<li><a href="#">Аниматоры</a></li>
+													</ul>
+												</div></div>
+												<div class="col-md-4">
+													<div class="open-category ">
+														<h3>Организаторы мероприятия</h3>
+														<ul class="category-items">
+															<li><a href="#">Тимбилдинг</a></li>
+															<li><a href="#">Свадебные регистрации</a></li>
+															<li><a href="#">Организация свадьбы</a></li>
+														</ul>
+													</div></div>
+													<div class="col-md-4">
+														<div class="open-category clearfix">
+															<h3>Прочее</h3>
+															<ul class="category-items">
+																<li><a href="#">Прочее</a></li>
+																<li><a href="#">Слайд-шоу</a></li></ul>
+															</div>
+														</div></div>
+													</li>
+													<li><a href="#">Новости</a></li>
+													<li><a href="#">Тимбилдинг</a></li>
+													<li><a href="#">Контакты</a></li>
+													<li><a href="#">Личный кабинет</a></li>
+												</ul>
+											</nav>
+
+										</div>							
+										<a href="#" class="toggle-mnu hidden-lg"><span></span></a>
+
+									</div>
+								</div>
+							</div><div class="col-sm-12">
+							<nav class="hiden-main-menu main-mnu hidden-lg clearfix">
+								<ul>	
+									<li class="active"><a href="#">Главная</a></li>
+									<li><a href="#">Ведущие</a></li>
+									<li class="open-main-cat"><a href="#">Все услуги <i class="fa fa-caret-down" aria-hidden="true"></i></i></a>
+										<ul class="dropmain-menu">
+											<li><a href="#">Ведущие & Тамада</a></li>
+											<li><a href="#">Dj</a></li>
+											<li><a href="#">Живые команды</a></li>
+											<li><a href="#">Фото&Видео</a></li>
+											<li><a href="#">Шоу-программа</a></li>
+											<li><a href="#">Аниматоры</a></li>
+											<li><a href="#">Тимбилдинг</a></li>
+											<li><a href="#">Свадебные регистрации</a></li>
+											<li><a href="#">Организация свадьбы</a></li>
+											<li><a href="#">Прочее</a></li>
+											<li><a href="#">Слайд-шоу</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Новости</a></li>
+									<li><a href="#">Тимбилдинг</a></li>
+									<li><a href="#">Контакты</a></li>
+								</ul>
+							</nav>							
+						</div>
+					</div>
+
+					<div class="header-conteiner parallax"  data-parallax-image="../img/bg-head.jpg">
+						<div class="header-content">
+							<img src="img/logo.png" alt="Ведущие">
+							<div class="label-text clearfix">
+								<div class="header-text-logo col-sm-6 hidden-xs"><h2>ВСЕ для вашего</h2> </div>
+								<div class="header-text-logo-elem col-sm-6 hidden-xs"><h2>мероприятия</h2></div>	
+							</div>
+							<div class="text-header">
+								Veduschie.kz - Сайт для вашего праздника
+								Организация мероприятий любой сложности
+								Лутчшие специалисты 
+							</div>
+						</div>
+					</div>
+
+					<div class="uslugi-main">
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-12"><h2>ВСЕ УСЛУГИ</h2></div>
+								<div class="col-sm-4">
+									<div class="open-category-2">
+										<h3>Специалисты</h3>
+										<ul class="category-items-2">
+											<li><a href="#"><span class="png-icon-wrapper">
+												<img src="img/icon/png/bow-1.png" alt="Veduschie.kz">
+											</span>Ведущие & Тамада</a></li>
+											<li><a href="#"><span class="png-icon-wrapper">
+												<img src="img/icon/png/vinyl.png" alt="Veduschie.kz"></span>Dj</a></li>
+												<li><a href="#"><span class="png-icon-wrapper">
+													<img src="img/icon/png/microphone.png" alt="Veduschie.kz"></span>Живые команды</a></li>
+													<li><a href="#"><span class="png-icon-wrapper">
+														<img src="img/icon/png/camera.png" alt="Veduschie.kz"></span>Фото&Видео</a></li>
+														<li><a href="#"><span class="png-icon-wrapper">
+															<img src="img/icon/png/bells.png" alt="Veduschie.kz"></span>Шоу-программа</a></li>
+															<li><a href="#"><span class="png-icon-wrapper">
+																<img src="img/icon/png/balloon.png" alt="Veduschie.kz"></span>Аниматоры</a></li>
+															</ul>
+														</div>
+													</div>
+													<div class="col-sm-4">
+														<div class="open-category-2">
+															<h3>Организаторы мероприятия</h3>
+															<ul class="category-items-2">
+																<li><a href="#"><span class="png-icon-wrapper"><img src="img/icon/png/desserts.png" alt="Veduschie.kz">Тимбилдинг</span></a></li>
+																<li><a href="#"><span class="png-icon-wrapper"><img src="img/icon/png/rings.png" alt="Veduschie.kz">Свадебные регистрации</span></a></li>
+																<li><a href="#"><span class="png-icon-wrapper"><img src="img/icon/png/tag.png" alt="Veduschie.kz">Организация свадьбы</a></span></li>
+															</ul>
+														</div>
+													</div>
+													<div class="col-sm-4">
+														<div class="open-category-2">
+															<h3>Прочее</h3>
+															<ul class="category-items-2">
+																<li><a href="#"><span class="png-icon-wrapper"><img src="img/icon/png/budget.png" alt="Veduschie.kz">Прочее услуги</span></a></li>
+																<li><a href="#"><span class="png-icon-wrapper"><img src="img/icon/png/wedding-car.png" alt="Veduschie.kz">Лимузины</span></a></li>
+																<li><a href="#"><span class="png-icon-wrapper"><img src="img/icon/png/wedding-photos.png" alt="Veduschie.kz">Слайд-шоу</span></a></li></ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</header>
+									<div class="container">
+										<div class="row">
+											<div class="col-sx-12 hidden-xs">
+												<section class="banner-site">
+													<i class="fa fa-file-image-o" aria-hidden="true"></i>
+													Место для вашей рекламы
+												</section>
+											</div>
+											<div class="tamada-promo clearfix">
+												<div class="col-md-6 col-sx-6 col-xs-10">
+													<div class="page-header">
+														<h2>Ведущие promo</h2>
+													</div>
+												</div>
+												<div class="col-md-6 col-sx-6 col-xs-2">
+													<div class="all-title">
+														<a href="#">Все ведущие</a>
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="k2ItemsBlock clearfix">
+														<ul>
+															<li class="even">	
+																<a href="#" class="moduleItemImage">													
+																	<img src="img/media-k2/1M.jpg">
+																</a>	
+																<a href="#" class="moduleItemTitle" alt="Елена горовая">Елена Горовая</a>
+																<div class="moduleItemExtraFields">
+																	<h3>Контакты</h3>
+																	<ul>
+																		<li class="typeTextfield group1">
+																			<span class="moduleItemExtraFieldsLabel">Телефон</span>
+																			<span class="moduleItemExtraFieldsValue">+7 777 226-32-34</span>
+																		</li>
+																	</ul>
+																</div>
+															</li>
+															<li class="even">	
+																<a href="#" class="moduleItemImage">													
+																	<img src="img/media-k2/5M.jpg">
+																</a>	
+																<a href="#" class="moduleItemTitle" alt="Тамада Галина">Тамада Галина</a>
+																<div class="moduleItemExtraFields">
+																	<h3>Контакты</h3>
+																	<ul>
+																		<li class="typeTextfield group1">
+																			<span class="moduleItemExtraFieldsLabel">Телефон</span>
+																			<span class="moduleItemExtraFieldsValue">+7 777 234-5442</span>
+																		</li>
+																	</ul>
+																</div>
+															</li>
+															<li class="even">	
+																<a href="#" class="moduleItemImage">													
+																	<img src="img/media-k2/3M.jpg">
+																</a>	
+																<a href="#" class="moduleItemTitle" alt="Булат Муратбеков">Булат Муратбеков</a>
+																<div class="moduleItemExtraFields">
+																	<h3>Контакты</h3>
+																	<ul>
+																		<li class="typeTextfield group1">
+																			<span class="moduleItemExtraFieldsLabel">Телефон</span>
+																			<span class="moduleItemExtraFieldsValue">+7 701 705-7788</span>
+																		</li>
+																	</ul>
+																</div>
+															</li>														
+															<li class="even">	
+																<a href="#" class="moduleItemImage">													
+																	<img src="img/media-k2/4M.jpg">
+																</a>	
+																<a href="#" class="moduleItemTitle" alt="Берденбек Асхатов">Берденбек Асхатов</a>
+																<div class="moduleItemExtraFields">
+																	<h3>Контакты</h3>
+																	<ul>
+																		<li class="typeTextfield goup1">
+																			<span class="moduleItemExtraFieldsLabel">Телефон</span>
+																			<span class="moduleItemExtraFieldsValue">+7 777 118-8288</span>
+																		</li>
+																	</ul>
+																</div>
+															</li>				
+															<li class="even">	
+																<a href="#" class="moduleItemImage">													
+																	<img src="img/media-k2/2M.jpg">
+																</a>	
+																<a href="#" class="moduleItemTitle" alt="Ведущая Айгерим ">Ведущая Айгерим </a>
+																<div class="moduleItemExtraFields">
+																	<h3>Контакты</h3>
+																	<ul>
+																		<li class="typeTextfield group1">
+																			<span class="moduleItemExtraFieldsLabel">Телефон</span>
+																			<span class="moduleItemExtraFieldsValue">+7 707 877-7237</span>
+																		</li>
+																	</ul>
+																</div>
+															</li>
+															<li class="even">	
+																<a href="#" class="moduleItemImage">													
+																	<img src="img/media-k2/6M.jpg">
+																</a>	
+																<a href="#" class="moduleItemTitle" alt="Влад Далинов">Влад Далинов </a>
+																<div class="moduleItemExtraFields">
+																	<h3>Контакты</h3>
+																	<ul>
+																		<li class="typeTextfield">
+																			<span class="moduleItemExtraFieldsLabel">Телефон</span>
+																			<span class="moduleItemExtraFieldsValue">+7 777 226-3234</span>
+																		</li>
+																	</ul>
+																</div>
+												
+
+																</a>
+															</li>				
+														</ul>
+													</div>
+												</div>
+
+											</div>
+											<div class="col-sx-12 hidden-xs">
+												<section class="banner-site">
+													<i class="fa fa-file-image-o" aria-hidden="true"></i>
+													Место для вашей рекламы
+												</section>
+											</div>
+										</div>
+									</div>
+									<div class="blog-container clearfix ">
+										<div class="container">
+											<div class="row">
+												<div class="blog-content-news clearfix">
+													<div class="col-md-9 col-sx-12 col-xs-12">
+														<div class="blog-content clearfix">
+															<div class="col-md-6"><div class="page-header"><h3>Новости / Статьи</h3></div></div>
+															<div class="col-md-6"><div class="all-title"><a href="#">Все материалы</a></div></div>
+															<div class="moduletable clearfix">
+																<div class="k2ItemsAticals clearfix">
+																	<ul>
+																		<li class="even-aticals">
+
+																			<div class="moduleItemIntrotext-aticals">
+																				<div class="Image-item">
+																					<a href="#" class="moduleItemImage-aticals"><img src="img/bg-head-2.jpg" alt=""></a></div>
+																					<a href="#" class="moduleItemTitle-aticals">
+																						Важные моменты в подготовке к свадьбе
+																					</a>
+																					<span class="moduleItemDateCreated-aticals"><i class="fa fa-calendar" aria-hidden="true"></i> Пятница, 14 апреля 2017 12:49</span>
+																					<div class="intro-text">
+																						Предсвадебная лихорадка порой заставляет людей совершать довольно странные и несуразные поступки, например, неоднократно, безо всяких на то оснований, названивать поставщику или флористу в течение нескольких месяцев иди недель, предшествующих свадебному торжеству. Безусловно, проверка никогда не помешает, если с момента заключения контракта до торжественного приема прошло довольно продолжительное количество времени и,… 
+																					</div>
+																				</div>
+																				<div class="title-k2-aticals">
+																					<a href="#" class="read-on-aticals">Подробнее</a>
+
+																				</div>
+																			</li>
+																			<li class="odd-aticals">
+																				<div class="moduleItemIntrotext-aticals">
+																					<div class="Image-item">
+																						<a href="#" class="moduleItemImage-aticals"><img src="img/bg-slider.png" alt=""></a></div>
+																						<a href="#" class="moduleItemTitle-aticals">
+																							Как избрать тамаду на женитьбу 
+																						</a>
+																						<span class="moduleItemDateCreated-aticals"><i class="fa fa-calendar" aria-hidden="true"></i> Пятница, 14 апреля 2017 12:49</span>
+																						<div class="intro-text">
+																							Как избрать тамаду на женитьбу тамада на свадьбуЕсли вы приняли решение обозначить женитьбу, собственно что именуется, «по полной», без предложений тамады для вас не стать никоим образом. Одежда, кольца, свадебный кортеж, убранство зала – это дело вкуса 2-ух влюбленных. Но тамада – это человек,тамада на свадьбу в алматыкоторый обязан потрафить… 
+																						</div>
+																					</div>
+																					<div class="title-k2-aticals">
+																						<a href="#" class="read-on-aticals">Подробнее</a>
+																					</div>
+
+																				</li>
+																				<li class="even-aticals">
+																					<div class="moduleItemIntrotext-aticals">
+																						<div class="Image-item">
+																							<a href="#" class="moduleItemImage-aticals"><img src="img/bg-cont.jpg" alt=""></a></div>
+																							<a href="#" class="moduleItemTitle-aticals">
+																								Тамада - рулевой свадьбы 
+																							</a>
+																							<span class="moduleItemDateCreated-aticals"><i class="fa fa-calendar" aria-hidden="true"></i> Пятница, 14 апреля 2017 12:49</span>
+																							<div class="intro-text">
+																								Тамада — это тот человек, который возьмет на себя организацию и проведение развлекательной программы во время застолья. Жених с невестой, их родители, свидетели уже и так достаточно поработали, чтобы подготовить свадьбу, поэтому в этот день их хлопоты должны быть сведены к минимуму. Теперь они должны отдыхать и праздновать вместе со…
+																							</div>
+																						</div>
+																						<div class="title-k2-aticals">
+																							<a href="#" class="read-on-aticals">Подробнее</a>
+																						</div>
+
+																					</li>
+																					<li class="odd-aticals">
+																						<div class="moduleItemIntrotext-aticals">
+																							<div class="Image-item">
+																								<a href="#" class="moduleItemImage-aticals"><img src="img/bg-cont.jpg" alt=""></a></div>
+																								<a href="#" class="moduleItemTitle-aticals">
+																									Тамада - рулевой свадьбы 
+																								</a>
+																								<span class="moduleItemDateCreated-aticals"><i class="fa fa-calendar" aria-hidden="true"></i> Пятница, 14 апреля 2017 12:49</span>
+																								<div class="intro-text">
+																									Тамада — это тот человек, который возьмет на себя организацию и проведение развлекательной программы во время застолья. Жених с невестой, их родители, свидетели уже и так достаточно поработали, чтобы подготовить свадьбу, поэтому в этот день их хлопоты должны быть сведены к минимуму. Теперь они должны отдыхать и праздновать вместе со…
+																								</div>
+																							</div>
+																							<div class="title-k2-aticals">
+																								<a href="#" class="read-on-aticals">Подробнее</a>
+																							</div>
+																						</li>
+																						<li class="even-aticals">
+																							<div class="moduleItemIntrotext-aticals">
+																								<div class="Image-item">
+																									<a href="#" class="moduleItemImage-aticals"><img src="img/bg-slider.png" alt=""></a></div>
+																									<a href="#" class="moduleItemTitle-aticals">
+																										Как избрать тамаду на женитьбу 
+																									</a>
+																									<span class="moduleItemDateCreated-aticals"><i class="fa fa-calendar" aria-hidden="true"></i> Пятница, 14 апреля 2017 12:49</span>
+																									<div class="intro-text">
+																										Как избрать тамаду на женитьбу тамада на свадьбуЕсли вы приняли решение обозначить женитьбу, собственно что именуется, «по полной», без предложений тамады для вас не стать никоим образом. Одежда, кольца, свадебный кортеж, убранство зала – это дело вкуса 2-ух влюбленных. Но тамада – это человек,тамада на свадьбу в алматыкоторый обязан потрафить… 
+																									</div>
+																								</div>
+																								<div class="title-k2-aticals">
+																									<a href="#" class="read-on-aticals">Подробнее</a>
+																								</div>
+																							</li>
+																							<li class="odd-aticals">
+																								<div class="moduleItemIntrotext-aticals">
+																									<div class="Image-item">
+																										<a href="#" class="moduleItemImage-aticals"><img src="img/bg-cont.jpg" alt=""></a></div>
+																										<a href="#" class="moduleItemTitle-aticals">
+																											Тамада - рулевой свадьбы 
+																										</a>
+																										<span class="moduleItemDateCreated-aticals"><i class="fa fa-calendar" aria-hidden="true"></i> Пятница, 14 апреля 2017 12:49</span>
+																										<div class="intro-text">
+																											Тамада — это тот человек, который возьмет на себя организацию и проведение развлекательной программы во время застолья. Жених с невестой, их родители, свидетели уже и так достаточно поработали, чтобы подготовить свадьбу, поэтому в этот день их хлопоты должны быть сведены к минимуму. Теперь они должны отдыхать и праздновать вместе со…
+																										</div>
+																									</div>
+																									<div class="title-k2-aticals">
+																										<a href="#" class="read-on-aticals">Подробнее</a>
+																									</div>
+
+																								</li>
+																								<li class="even-aticals">
+																									<div class="moduleItemIntrotext-aticals">
+																										<div class="Image-item">
+																											<a href="#" class="moduleItemImage-aticals"><img src="img/bg-slider.png" alt=""></a></div>
+																											<a href="#" class="moduleItemTitle-aticals">
+																												Как избрать тамаду на женитьбу 
+																											</a>
+																											<span class="moduleItemDateCreated-aticals"><i class="fa fa-calendar" aria-hidden="true"></i> Пятница, 14 апреля 2017 12:49</span>
+																											<div class="intro-text">
+																												Как избрать тамаду на женитьбу тамада на свадьбуЕсли вы приняли решение обозначить женитьбу, собственно что именуется, «по полной», без предложений тамады для вас не стать никоим образом. Одежда, кольца, свадебный кортеж, убранство зала – это дело вкуса 2-ух влюбленных. Но тамада – это человек,тамада на свадьбу в алматыкоторый обязан потрафить… 
+																											</div>
+																										</div>
+																										<div class="title-k2-aticals">
+																											<a href="#" class="read-on-aticals">Подробнее</a>
+																										</div>
+																									</li>
+																									<li class="odd-aticals">
+																										<div class="moduleItemIntrotext-aticals">
+																											<div class="Image-item">
+																												<a href="#" class="moduleItemImage-aticals"><img src="img/bg-cont.jpg" alt=""></a></div>
+																												<a href="#" class="moduleItemTitle-aticals">
+																													Тамада - рулевой свадьбы 
+																												</a>
+																												<span class="moduleItemDateCreated-aticals"><i class="fa fa-calendar" aria-hidden="true"></i> Пятница, 14 апреля 2017 12:49</span>
+																												<div class="intro-text">
+																													Тамада — это тот человек, который возьмет на себя организацию и проведение развлекательной программы во время застолья. Жених с невестой, их родители, свидетели уже и так достаточно поработали, чтобы подготовить свадьбу, поэтому в этот день их хлопоты должны быть сведены к минимуму. Теперь они должны отдыхать и праздновать вместе со…
+																												</div>
+																											</div>
+																											<div class="title-k2-aticals">
+																												<a href="#" class="read-on-aticals">Подробнее</a>
+																											</div>
+																										</li>
+																										<li class="even-aticals">
+																											<div class="moduleItemIntrotext-aticals">
+																												<div class="Image-item">
+																													<a href="#" class="moduleItemImage-aticals"><img src="img/bg-slider.png" alt=""></a></div>
+																													<a href="#" class="moduleItemTitle-aticals">
+																														Как избрать тамаду на женитьбу 
+																													</a>
+																													<span class="moduleItemDateCreated-aticals"><i class="fa fa-calendar" aria-hidden="true"></i> Пятница, 14 апреля 2017 12:49</span>
+																													<div class="intro-text">
+																														Как избрать тамаду на женитьбу тамада на свадьбуЕсли вы приняли решение обозначить женитьбу, собственно что именуется, «по полной», без предложений тамады для вас не стать никоим образом. Одежда, кольца, свадебный кортеж, убранство зала – это дело вкуса 2-ух влюбленных. Но тамада – это человек,тамада на свадьбу в алматыкоторый обязан потрафить… 
+																													</div>
+																												</div>
+																												<div class="title-k2-aticals">
+																													<a href="#" class="read-on-aticals">Подробнее</a>
+																												</div>
+																											</li>
+																											<li class="odd-aticals">
+																												<div class="moduleItemIntrotext-aticals">
+																													<div class="Image-item">
+																														<a href="#" class="moduleItemImage-aticals"><img src="img/bg-slider.png" alt=""></a></div>
+																														<a href="#" class="moduleItemTitle-aticals">
+																															Как избрать тамаду на женитьбу 
+																														</a>
+																														<span class="moduleItemDateCreated-aticals"><i class="fa fa-calendar" aria-hidden="true"></i> Пятница, 14 апреля 2017 12:49</span>
+																														<div class="intro-text">
+																															Как избрать тамаду на женитьбу тамада на свадьбуЕсли вы приняли решение обозначить женитьбу, собственно что именуется, «по полной», без предложений тамады для вас не стать никоим образом. Одежда, кольца, свадебный кортеж, убранство зала – это дело вкуса 2-ух влюбленных. Но тамада – это человек,тамада на свадьбу в алматыкоторый обязан потрафить… 
+																														</div>
+																													</div>
+																													<div class="title-k2-aticals">
+																														<a href="#" class="read-on-aticals">Подробнее</a>
+																													</div>
+																												</li>
+																											</ul>
+																										</div>
+																									</div>
+																								</div>
+
+
+																							</div>
+																							<div class="col-md-3 col-sx-12  col-xs-12">
+																								<div class="sedebar-conteiner">
+
+																								</div>
+																							</div>
+
+
+																						</div>
+																					</div>
+																				</div>
+
+
+																				<footer class="footer clearfix">
+
+																					<div class="container">
+																						<div class="row">
+																							<div class="footer-main">
+																								<div class="col-md-4">
+																									<h3>Меню</h3>
+																									<ul>
+																										<li><a href="#">Главная</a></li>
+																										<li><a href="#">Ведущие</a></li>
+																										<li><a href="#">Dj</a></li>
+																										<li><a href="#">Музыканты</a></li>
+																										<li><a href="#">Фото & Видео</a></li>
+																										<li><a href="#">Шоу-программа</a></li>
+																										<li><a href="#">Тимбилдинг</a></li>
+																										<li><a href="#">Свадебные регистрации</a></li>
+																										<li><a href="#">Организация свадьбы</a></li>
+																										<li><a href="#">Прочии услуги</a></li>
+																										<li><a href="#">Лимузины</a></li>
+																										<li><a href="#">Слайд шоу</a></li>
+																									</ul>
+
+																								</div>
+																								<div class="col-md-4">
+																									<div class="footer-about">
+																										<h3>О нас</h3>
+																										<div class="foter-text-about">Veduschie.kz - портал Казахстана, на котором каждий  сможет подобрать для себя любое мероприятие, ведущих , диджеев, оформителей фотографа и тд. </div>
+
+																									</div>
+
+																								</div>
+																								<div class="col-md-4">
+																									<h3>Контакты</h3>
+																									<div class="foter-text-about">
+																										<ul>
+																											<li>Телефон : 7 727 367-17-67</li>
+																											<li>Телефон : 7 777 226-32-34</li>
+																											<li>Телефон : 7 777 021-31-29</li>
+																										</ul>
+																										<div class="foter-text-about clearfix">
+																											<h3>Мы в соц. сетях</h3>
+																											<ul>
+																												<li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+																												<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+																												<li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+																											</ul>
+
+																										</div>
+
+																									</div>
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="footer-bottom clearfix">
+																						© 2016 Ведущие 
+																					</div>
+
+
+
+																				</footer>
+
+
+																				<div class="hidden"></div>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+	<script>
+
+
+	</script>
+	<script src="/app/libs/parallax/parallax.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- Load Scripts Start -->
+	<script>var scr = {"scripts":[
+		{"src" : "js/libs.js", "async" : false},
+		{"src" : "js/common.js", "async" : false}
+		]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+	</script>
+	<!-- Load Scripts End -->
+
+</body>
+</html>
